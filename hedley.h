@@ -1647,15 +1647,15 @@ HEDLEY_DIAGNOSTIC_POP
 #if defined(HEDLEY_IMPORT)
 #  undef HEDLEY_IMPORT
 #endif
-#if defined(HEDLEY_IMPORT_CLASSES)
-#  undef HEDLEY_IMPORT_CLASSES
+#if defined(HEDLEY_IMPORT_CLASS)
+#  undef HEDLEY_IMPORT_CLASS
 #endif
 #if defined(_WIN32) || defined(__CYGWIN__)
 #  define HEDLEY_PRIVATE
 #  define HEDLEY_PUBLIC   __declspec(dllexport)
 #  define HEDLEY_IMPORT   __declspec(dllimport)
 #  if defined(__cplusplus)
-#    define HEDLEY_IMPORT_CLASSES HEDLEY_IMPORT
+#    define HEDLEY_IMPORT_CLASS HEDLEY_IMPORT
 #  endif
 #else
 #  if \
@@ -1681,7 +1681,7 @@ HEDLEY_DIAGNOSTIC_POP
 #  endif
 #  define HEDLEY_IMPORT    extern
 #  if defined(__cplusplus)
-#    define HEDLEY_IMPORT_CLASSES
+#    define HEDLEY_IMPORT_CLASS
 #  endif
 #endif
 
